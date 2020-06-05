@@ -1,0 +1,206 @@
+$color-dark: rgb(26, 26, 26);
+$color-lightDark: rgb(79, 82, 92);
+$color-light: rgb(245, 245, 245);
+$color-blueDark: rgb(87, 106, 141);
+$color-lightBlue: rgb(0, 132, 255);
+$color-green:rgb(0, 126, 0);
+$color-greenDark: rgb(0, 94, 0);
+$color-red: rgb(223, 0, 0);
+$color-redDark: rgb(155, 0, 0);
+$color-white: rgb(255, 255, 255);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 75px 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: $color-light;
+}
+
+
+.wrapper {
+    width: 850px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 4px 4px 5px rgba(82, 82, 82, 0.4);
+    text-align: center;
+}
+
+.header {
+    border-radius: 5px 5px 0 0;
+    padding: 40px;
+    background-image: linear-gradient(0.25turn, #576a8d, #3f87a6, #bd7325);;
+}
+
+.header__title {
+    color: $color-light;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.header__input {
+    width: 80%;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 5px;
+    color: $color-lightDark;
+    background-color: $color-light;
+}
+
+.btn__add {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 5px;
+    color: $color-dark;
+    background-color: $color-light;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.btn__add:hover {
+    color: #fff;
+    background-color: $color-blueDark;
+}
+
+.todo {
+    padding: 20px 0;
+}
+
+.todo__title {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.todo__alertInfo {
+    margin-top: 20px;
+    color: $color-blueDark;
+}
+
+.todo__element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+    padding-left: 20px;
+    text-align: left;
+    list-style: none;
+    background-color: $color-light;
+}
+
+.tools {
+    display: inline-block;
+}
+
+.tools button {
+    padding: 15px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tools button:hover {
+    background-color: #ddd;
+}
+
+.btn__complete {
+    color: $color-lightBlue;
+}
+
+.btn__edit {
+    font-weight: bold;
+    color: rgb(15, 179, 69);
+}
+
+.btn__delete {
+    color: tomato;
+}
+
+.completed {
+    font-size: 12px;
+    color: $color-lightDark;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    color: $color-light;
+    background-color: $color-lightDark;
+    border-radius: 5px;
+}
+
+.popup__title {
+    padding: 20px;
+    text-align: center;
+}
+
+.popup__info {
+    color: $color-light;
+    margin-bottom: 20px;
+}
+
+.popup__body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 10px;
+}
+
+.popup__input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: $color-lightDark;
+    background-color: $color-light;
+}
+
+.btn__popup {
+    width: 30%;
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    color: $color-dark;
+    background-color: $color-light;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.btn__cancel {
+    background-color: $color-red;
+    color: $color-white;
+    &:hover {
+        background-color: $color-redDark;
+    }
+}
+
+.btn__accept {
+    background-color: $color-green;
+    color: $color-white;
+    &:hover {
+        background-color:$color-greenDark
+    }
+}

@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista Zadań - ToDo</title>
+    <script src="https://kit.fontawesome.com/c5afe1f91e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h1 class="header__title">ToDo List</h1>
+            <input type="text" class="header__input" placeholder="Wpisz treść zadania..." />
+            <button class="btn__add">Add</button>
+        </div>
+        <div class="todo">
+            <h3 class="todo__title">Lista zadań:</h3>
+            <p class="todo__alertInfo">Brak zadań na liście.</p>
+            <ul class="todo__list">
+                <li class="todo__element" id="test">
+                    Zrobić zakupy.
+                    <div class="tools">
+                        <button class="btn__complete"><i class="fas fa-check"></i></button>
+                        <button class="btn__edit">EDIT</button>
+                        <button class="btn__delete"><i class="fas fa-times"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="popup">
+        <h3 class="popup__title">Edytuj zadanie:</h3>
+        <div class="popup__body">
+            <p class="popup__info"></p>
+            <input type="text" class="popup__input" placeholder="Wprowadź nową treść zadania..." />
+            <button class="btn__popup btn__cancel">Anuluj</button>
+            <button class="btn__popup btn__accept">Zatwierdź</button>
+        </div>
+    </div>
+</body>
+
+</html>
