@@ -7,7 +7,7 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 75px 0;
   font-family: "Montserrat", sans-serif;
   background-color: whitesmoke;
@@ -121,14 +121,25 @@ body {
 }
 
 .popup {
+  position: fixed;
   display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__wrapper {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 800px;
   color: whitesmoke;
   background-color: #4f525c;
