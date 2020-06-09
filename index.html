@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista Zadań - ToDo</title>
-    <script src="https://kit.fontawesome.com/c5afe1f91e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pl.js"></script>
+    <script src="https://kit.fontawesome.com/c5afe1f91e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,13 +20,28 @@
         <div class="header">
             <h1 class="header__title">ToDo List</h1>
             <input type="text" class="header__input" placeholder="Wpisz treść zadania..." />
+            <input id='datePicker' class='header__datePicker' placeholder="Wybierz date..." />
             <button class="btn__add">Add</button>
         </div>
         <div class="todo">
             <h3 class="todo__title">Lista zadań:</h3>
             <p class="todo__alertInfo"></p>
             <ul class="todo__list">
-                <li class="todo__element" id="test">Zrobić zakupy.<br>
+                <li class="todo__element" id="test">Zrobić zakupy.<span class="todo__span">10/06/2020</span><br>
+                    <div class="tools">
+                        <button class="btn__complete"><i class="fas fa-check"></i></button><button
+                            class="btn__edit">EDIT</button><button class="btn__delete"><i
+                                class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li class="todo__element" id="test">Zapłacić rachunki.<span class="todo__span">10/06/2020</span><br>
+                    <div class="tools">
+                        <button class="btn__complete"><i class="fas fa-check"></i></button><button
+                            class="btn__edit">EDIT</button><button class="btn__delete"><i
+                                class="fas fa-times"></i></button>
+                    </div>
+                </li>
+                <li class="todo__element" id="test">Posprzątać kuchnie.<span class="todo__span">10/06/2020</span><br>
                     <div class="tools">
                         <button class="btn__complete"><i class="fas fa-check"></i></button><button
                             class="btn__edit">EDIT</button><button class="btn__delete"><i

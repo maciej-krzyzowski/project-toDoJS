@@ -46,9 +46,17 @@ body {
 }
 
 .header__input {
-    width: 80%;
-    padding: 10px 20px;
-    margin-right: 20px;
+    width: 70%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: $color-lightDark;
+    background-color: $color-light;
+}
+
+.header__datePicker {
+    width: 17%;
+    padding: 10px 15px;
     border: none;
     border-radius: 5px;
     color: $color-lightDark;
@@ -94,6 +102,10 @@ body {
     text-align: left;
     list-style: none;
     background-color: $color-light;
+}
+
+.todo__span {
+    margin: 0 20px 0 auto;
 }
 
 .tools {

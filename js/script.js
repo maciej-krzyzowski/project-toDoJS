@@ -1,8 +1,10 @@
 let input;
+let datePickerInput;
 let alertInfo;
 let btnAdd;
 let list;
 let newTask;
+let dateTask;
 let popup;
 let popupInfo;
 let editedTodo;
@@ -14,10 +16,12 @@ let id = 0;
 const main = () => {
     prepareDOMElements();
     prepareDomEvents();
+    datePicker();
 };
 
 const prepareDOMElements = () => {
     input = document.querySelector('.header__input');
+    datePickerInput = document.getElementById('datePicker');
     alertInfo = document.querySelector('.todo__alertInfo');
     btnAdd = document.querySelector('.btn__add');
     list = document.querySelector('.todo__list');
@@ -38,6 +42,14 @@ const prepareDomEvents = () => {
     popupInput.addEventListener('keyup', enterChangeTask);
 };
 
+const datePicker = () => {
+    flatpickr("#datePicker", {
+        dateFormat: "d/m/Y",
+        minDate: "today",
+        locale: 'pl',
+    });
+}
+
 const addNewTask = () => {
     if (input.value !== '') {
         id++;
@@ -45,11 +57,17 @@ const addNewTask = () => {
         newTask.setAttribute('id', id)
         newTask.classList.add('todo__element');
         newTask.innerText = input.value;
+        dateTask = document.createElement('span');
+        dateTask.classList.add('todo__span');
+        dateTask.innerText = datePickerInput.value;
+        newTask.appendChild(dateTask);
         list.appendChild(newTask);
         createToolsArea();
 
         input.value = '';
         alertInfo.innerText = '';
+        const fp = document.querySelector("#datePicker")._flatpickr;
+        fp.clear()
     } else {
         alertInfo.innerText = 'Wpisz treść zadania!';
     };
