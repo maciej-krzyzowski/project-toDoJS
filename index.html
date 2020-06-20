@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lista Zadań - ToDo</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/pl.js"></script>
@@ -20,28 +20,31 @@
         <div class="header">
             <h1 class="header__title">ToDo List</h1>
             <input type="text" class="header__input" placeholder="Wpisz treść zadania..." />
-            <input id='datePicker' class='header__datePicker' placeholder="Wybierz date..." />
+            <input id='datePicker' class='datePicker' placeholder="Wybierz date..." />
             <button class="btn__add">Add</button>
         </div>
         <div class="todo">
             <h3 class="todo__title">Lista zadań:</h3>
             <p class="todo__alertInfo"></p>
             <ul class="todo__list">
-                <li class="todo__element" id="test">Zrobić zakupy.<span class="todo__span">10/06/2020</span><br>
+                <li class="todo__element" id="test1">Zrobić zakupy.<span id='date'
+                        class="todo__span">10/08/2020</span><br>
                     <div class="tools">
                         <button class="btn__complete"><i class="fas fa-check"></i></button><button
                             class="btn__edit">EDIT</button><button class="btn__delete"><i
                                 class="fas fa-times"></i></button>
                     </div>
                 </li>
-                <li class="todo__element" id="test">Zapłacić rachunki.<span class="todo__span">10/06/2020</span><br>
+                <li class="todo__element" id="test2">Zapłacić rachunki.<span id='date'
+                        class="todo__span">12/07/2020</span><br>
                     <div class="tools">
                         <button class="btn__complete"><i class="fas fa-check"></i></button><button
                             class="btn__edit">EDIT</button><button class="btn__delete"><i
                                 class="fas fa-times"></i></button>
                     </div>
                 </li>
-                <li class="todo__element" id="test">Posprzątać kuchnie.<span class="todo__span">10/06/2020</span><br>
+                <li class="todo__element" id="test3">Posprzątać kuchnie.<span id='date'
+                        class="todo__span">06/10/2020</span><br>
                     <div class="tools">
                         <button class="btn__complete"><i class="fas fa-check"></i></button><button
                             class="btn__edit">EDIT</button><button class="btn__delete"><i
@@ -58,6 +61,7 @@
             <div class="popup__body">
                 <p class="popup__info"></p>
                 <input type="text" class="popup__input" placeholder="Wprowadź nową treść zadania..." />
+                <input id='datePicker' class='popup__datePicker datePicker' placeholder="Wybierz date..." />
                 <button class="btn__popup btn__cancel">Anuluj</button>
                 <button class="btn__popup btn__accept">Zatwierdź</button>
             </div>

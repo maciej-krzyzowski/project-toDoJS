@@ -9,6 +9,9 @@ let popup;
 let popupInfo;
 let editedTodo;
 let popupInput;
+let popupDatePicker;
+let oldTodo;
+let editedDate;
 let btnAccept;
 let btnCancle;
 let id = 0;
@@ -28,6 +31,7 @@ const prepareDOMElements = () => {
     popup = document.querySelector('.popup');
     popupInfo = document.querySelector('.popup__info');
     popupInput = document.querySelector('.popup__input');
+    popupDatePicker = document.querySelector('.popup__datePicker');
     btnAccept = document.querySelector('.btn__accept');
     btnCancle = document.querySelector('.btn__cancel');
 };
@@ -47,7 +51,13 @@ const datePicker = () => {
         dateFormat: "d/m/Y",
         minDate: "today",
         locale: 'pl',
+        disableMobile: "true",
     });
+}
+
+const sort = () => {
+    list.sort(a, b => (a - b));
+    console.log(object);
 }
 
 const addNewTask = () => {
@@ -58,6 +68,7 @@ const addNewTask = () => {
         newTask.classList.add('todo__element');
         newTask.innerText = input.value;
         dateTask = document.createElement('span');
+        dateTask.setAttribute('id', 'date')
         dateTask.classList.add('todo__span');
         dateTask.innerText = datePickerInput.value;
         newTask.appendChild(dateTask);
@@ -117,12 +128,17 @@ const doneTask = e => {
 }
 
 const editTask = e => {
-    const oldTodo = e.target.closest('li').id;
+    oldTodo = e.target.closest('li').id;
     editedTodo = document.getElementById(oldTodo);
+    editedDate = editedTodo.querySelector('#date');
+
     popupInput.value = editedTodo.firstChild.textContent;
+    popupDatePicker.value = editedDate.textContent;
 
     popup.style.display = 'flex';
-    popupInput.focus();
+    if (window.innerWidth > 768) {
+        popupInput.focus();
+    }
 };
 
 const deleteTask = e => {
@@ -138,6 +154,7 @@ const deleteTask = e => {
 const changeTask = () => {
     if (popupInput.value !== '') {
         editedTodo.firstChild.textContent = popupInput.value;
+        editedDate.textContent = popupDatePicker.value;
         popup.style.display = 'none';
         popupInfo.innerText = '';
     } else {

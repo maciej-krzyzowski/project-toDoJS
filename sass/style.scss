@@ -27,14 +27,14 @@ body {
 
 .wrapper {
     width: 850px;
-    border-radius: 5px;
+    border-radius: 10px;
     background: #fff;
     box-shadow: 4px 4px 5px rgba(82, 82, 82, 0.4);
     text-align: center;
 }
 
 .header {
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px 10px 0 0;
     padding: 40px;
     background-image: linear-gradient(0.25turn, #576a8d, #3f87a6, #bd7325);;
 }
@@ -54,8 +54,8 @@ body {
     background-color: $color-light;
 }
 
-.header__datePicker {
-    width: 17%;
+.datePicker {
+    width: 108px;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -95,9 +95,11 @@ body {
 
 .todo__element {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin: 15px;
+    padding: 5px 0;
     padding-left: 20px;
     text-align: left;
     list-style: none;
@@ -109,7 +111,8 @@ body {
 }
 
 .tools {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
 }
 
 .tools button {
@@ -190,12 +193,14 @@ body {
 }
 
 .popup__input {
-    width: 100%;
+    width: 80%;
     padding: 10px 20px;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
     color: $color-lightDark;
     background-color: $color-light;
+    display: inline-block;
 }
 
 .btn__popup {
@@ -225,5 +230,130 @@ body {
     color: $color-white;
     &:hover {
         background-color:$color-greenDark
+    }
+}
+
+@media(max-width: 992px) {
+    body {
+        margin: 40px 0;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .header {
+        padding: 40px 10px;
+    }
+
+    .header__title {
+        margin: 20px 0;
+    }
+    
+    .header__input {
+        width: 70%;
+        margin-bottom: 10px;
+    }
+    
+    .datePicker {
+        width: 108px;
+    }
+
+    .btn__add {
+        padding: 10px 15px;
+    }
+
+    .popup__wrapper {
+        width: 90%;
+    }
+}
+
+
+@media(max-width: 768px) {
+    .header__input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .datePicker {
+        width: 108px;
+    }
+
+    .flatpickr-calendar {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .flatpickr-calendar.arrowTop:before, .flatpickr-calendar.arrowTop:after {
+        left: 30%;
+    }
+
+    .btn__add {
+        padding: 10px 15px;
+    }
+    
+    .popup__wrapper {
+        width: 95%;
+        position: absolute;
+        top: 10%;
+    }
+    
+    .popup__body {
+        width: 95%;
+    }
+    
+    .popup__input {
+        width: 70%;
+    }
+
+    .popup__datePicker {
+        width: 90px;
+    }
+    
+    .btn__popup {
+        width: 40%;
+        margin: 20px 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .todo__element {
+        font-size: 14px;
+    }
+
+    .todo__span {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+
+    .tools button {
+        padding: 15px 7px;
+    }
+
+    .popup__input {
+        width: 65%;
+    }
+    
+    .btn__popup {
+        width: 30%;
+    }
+}
+
+@media (max-width: 350px) {
+    .todo__element {
+        font-size: 12px;
+    }
+
+    .todo__span {
+        display: none;
+    }
+
+    .popup__input {
+        width: 60%;
+    }
+
+    .btn__popup {
+        margin: 20px 10px;
+        padding: 10px;
     }
 }

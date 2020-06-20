@@ -1,221 +1,94 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 75px 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: whitesmoke;
-}
+body { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: start; align-items: flex-start; margin: 75px 0; font-family: "Montserrat", sans-serif; background-color: whitesmoke; }
 
-.wrapper {
-  width: 850px;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 4px 4px 5px rgba(82, 82, 82, 0.4);
-  text-align: center;
-}
+.wrapper { width: 850px; border-radius: 10px; background: #fff; box-shadow: 4px 4px 5px rgba(82, 82, 82, 0.4); text-align: center; }
 
-.header {
-  border-radius: 5px 5px 0 0;
-  padding: 40px;
-  background-image: linear-gradient(0.25turn, #576a8d, #3f87a6, #bd7325);
-}
+.header { border-radius: 10px 10px 0 0; padding: 40px; background-image: linear-gradient(0.25turn, #576a8d, #3f87a6, #bd7325); }
 
-.header__title {
-  color: whitesmoke;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-}
+.header__title { color: whitesmoke; margin-bottom: 20px; text-transform: uppercase; }
 
-.header__input {
-  width: 70%;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  color: #4f525c;
-  background-color: whitesmoke;
-}
+.header__input { width: 70%; padding: 10px 15px; border: none; border-radius: 5px; color: #4f525c; background-color: whitesmoke; }
 
-.header__datePicker {
-  width: 17%;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  color: #4f525c;
-  background-color: whitesmoke;
-}
+.datePicker { width: 108px; padding: 10px 15px; border: none; border-radius: 5px; color: #4f525c; background-color: whitesmoke; }
 
-.btn__add {
-  padding: 10px 22px;
-  border: none;
-  border-radius: 5px;
-  color: #1a1a1a;
-  background-color: whitesmoke;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
-}
+.btn__add { padding: 10px 22px; border: none; border-radius: 5px; color: #1a1a1a; background-color: whitesmoke; text-transform: uppercase; cursor: pointer; transition: color 0.3s, background-color 0.3s; }
 
-.btn__add:hover {
-  color: #fff;
-  background-color: #576a8d;
-}
+.btn__add:hover { color: #fff; background-color: #576a8d; }
 
-.todo {
-  padding: 20px 0;
-}
+.todo { padding: 20px 0; }
 
-.todo__title {
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
+.todo__title { text-transform: uppercase; margin-bottom: 16px; }
 
-.todo__alertInfo {
-  margin-top: 20px;
-  color: #576a8d;
-}
+.todo__alertInfo { margin-top: 20px; color: #576a8d; }
 
-.todo__element {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 15px;
-  padding-left: 20px;
-  text-align: left;
-  list-style: none;
-  background-color: whitesmoke;
-}
+.todo__element { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-align: center; align-items: center; margin: 15px; padding: 5px 0; padding-left: 20px; text-align: left; list-style: none; background-color: whitesmoke; }
 
-.todo__span {
-  margin: 0 20px 0 auto;
-}
+.todo__span { margin: 0 20px 0 auto; }
 
-.tools {
-  display: inline-block;
-}
+.tools { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; }
 
-.tools button {
-  padding: 15px 10px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+.tools button { padding: 15px 10px; border: none; background-color: transparent; cursor: pointer; transition: background-color 0.3s; }
 
-.tools button:hover {
-  background-color: #ddd;
-}
+.tools button:hover { background-color: #ddd; }
 
-.btn__complete {
-  color: #0084ff;
-}
+.btn__complete { color: #0084ff; }
 
-.btn__edit {
-  font-weight: bold;
-  color: #0fb345;
-}
+.btn__edit { font-weight: bold; color: #0fb345; }
 
-.btn__delete {
-  color: tomato;
-}
+.btn__delete { color: tomato; }
 
-.completed {
-  font-size: 12px;
-  color: #4f525c;
-  text-decoration: line-through;
-  font-style: italic;
-}
+.completed { font-size: 12px; color: #4f525c; text-decoration: line-through; font-style: italic; }
 
-.popup {
-  position: fixed;
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
-  margin: 0;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  justify-content: center;
-  align-items: center;
-}
+.popup { position: fixed; display: none; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8); margin: 0; top: 0px; bottom: 0px; left: 0px; right: 0px; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
-.popup__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 800px;
-  color: whitesmoke;
-  background-color: #4f525c;
-  border-radius: 5px;
-}
+.popup__wrapper { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; width: 800px; color: whitesmoke; background-color: #4f525c; border-radius: 5px; }
 
-.popup__title {
-  padding: 20px;
-  text-align: center;
-}
+.popup__title { padding: 20px; text-align: center; }
 
-.popup__info {
-  color: whitesmoke;
-  margin-bottom: 20px;
-}
+.popup__info { color: whitesmoke; margin-bottom: 20px; }
 
-.popup__body {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  width: 90%;
-  padding: 10px;
-}
+.popup__body { display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; margin: 0 auto; -ms-flex-wrap: wrap; flex-wrap: wrap; width: 90%; padding: 10px; }
 
-.popup__input {
-  width: 100%;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  color: #4f525c;
-  background-color: whitesmoke;
-}
+.popup__input { width: 80%; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; color: #4f525c; background-color: whitesmoke; display: inline-block; }
 
-.btn__popup {
-  width: 30%;
-  display: inline-block;
-  padding: 10px 22px;
-  margin: 20px;
-  border: none;
-  border-radius: 5px;
-  color: #1a1a1a;
-  background-color: whitesmoke;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
-}
+.btn__popup { width: 30%; display: inline-block; padding: 10px 22px; margin: 20px; border: none; border-radius: 5px; color: #1a1a1a; background-color: whitesmoke; text-transform: uppercase; cursor: pointer; transition: color 0.3s, background-color 0.3s; }
 
-.btn__cancel {
-  background-color: #df0000;
-  color: white;
-}
+.btn__cancel { background-color: #df0000; color: white; }
 
-.btn__cancel:hover {
-  background-color: #9b0000;
-}
+.btn__cancel:hover { background-color: #9b0000; }
 
-.btn__accept {
-  background-color: #007e00;
-  color: white;
-}
+.btn__accept { background-color: #007e00; color: white; }
 
-.btn__accept:hover {
-  background-color: #005e00;
-}
+.btn__accept:hover { background-color: #005e00; }
 
-/*# sourceMappingURL=style.css.map */
+@media (max-width: 992px) { body { margin: 40px 0; }
+  .wrapper { width: 90%; }
+  .header { padding: 40px 10px; }
+  .header__title { margin: 20px 0; }
+  .header__input { width: 70%; margin-bottom: 10px; }
+  .datePicker { width: 108px; }
+  .btn__add { padding: 10px 15px; }
+  .popup__wrapper { width: 90%; } }
+
+@media (max-width: 768px) { .header__input { width: 100%; margin-bottom: 10px; }
+  .datePicker { width: 108px; }
+  .flatpickr-calendar { left: 50% !important; transform: translateX(-50%) !important; }
+  .flatpickr-calendar.arrowTop:before, .flatpickr-calendar.arrowTop:after { left: 30%; }
+  .btn__add { padding: 10px 15px; }
+  .popup__wrapper { width: 95%; position: absolute; top: 10%; }
+  .popup__body { width: 95%; }
+  .popup__input { width: 70%; }
+  .popup__datePicker { width: 90px; }
+  .btn__popup { width: 40%; margin: 20px 15px; } }
+
+@media (max-width: 576px) { .todo__element { font-size: 14px; }
+  .todo__span { margin-right: 10px; font-size: 12px; }
+  .tools button { padding: 15px 7px; }
+  .popup__input { width: 65%; }
+  .btn__popup { width: 30%; } }
+
+@media (max-width: 350px) { .todo__element { font-size: 12px; }
+  .todo__span { display: none; }
+  .popup__input { width: 60%; }
+  .btn__popup { margin: 20px 10px; padding: 10px; } }
