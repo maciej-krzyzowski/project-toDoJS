@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <div class="wrapper">
         <div class="header">
             <h1 class="header__title">ToDo List</h1>
@@ -26,32 +27,7 @@
         <div class="todo">
             <h3 class="todo__title">Lista zadań:</h3>
             <p class="todo__alertInfo"></p>
-            <ul class="todo__list">
-                <li class="todo__element" id="test1">Zrobić zakupy.<span id='date'
-                        class="todo__span">10/08/2020</span><br>
-                    <div class="tools">
-                        <button class="btn__complete"><i class="fas fa-check"></i></button><button
-                            class="btn__edit">EDIT</button><button class="btn__delete"><i
-                                class="fas fa-times"></i></button>
-                    </div>
-                </li>
-                <li class="todo__element" id="test2">Zapłacić rachunki.<span id='date'
-                        class="todo__span">12/07/2020</span><br>
-                    <div class="tools">
-                        <button class="btn__complete"><i class="fas fa-check"></i></button><button
-                            class="btn__edit">EDIT</button><button class="btn__delete"><i
-                                class="fas fa-times"></i></button>
-                    </div>
-                </li>
-                <li class="todo__element" id="test3">Posprzątać kuchnie.<span id='date'
-                        class="todo__span">06/10/2020</span><br>
-                    <div class="tools">
-                        <button class="btn__complete"><i class="fas fa-check"></i></button><button
-                            class="btn__edit">EDIT</button><button class="btn__delete"><i
-                                class="fas fa-times"></i></button>
-                    </div>
-                </li>
-            </ul>
+            <ul class="todo__list"></ul>
         </div>
     </div>
 
@@ -67,6 +43,9 @@
             </div>
         </div>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase.js"></script>
     <script src="js/script.js"></script>
 </body>
 

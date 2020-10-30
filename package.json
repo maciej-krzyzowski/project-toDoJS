@@ -30,5 +30,6 @@
         "npm-run-all": "^4.1.5",
         "nu-html-checker": "^0.1.0",
         "onchange": "^6.1.0"
-    }
+    },
+    "dependencies": {}
 }
